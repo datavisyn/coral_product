@@ -1,0 +1,33 @@
+# special ignores for test cases
+tmp
+# general typescript changes
+/.tscache
+/.eslintcache
+/.idea
+/build/
+/storybook-static/
+/dist/tsBuildInfoFile
+/dist_python/
+/lib/
+*.egg-info/
+*.egg
+*.py[cod]
+__pycache__/
+*.so
+*~
+*.log
+*.pot
+*.pyc
+*.swp
+*.lock
+# due to using tox and pytest
+.tox
+.cache
+node_modules/
+/src/**/*.js
+/tests/**/*.js
+/src/**/*.map
+/tests/**/*.map 
+*.css
+package-lock.json
+super-linter.log

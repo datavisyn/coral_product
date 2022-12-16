@@ -1,0 +1,54 @@
+{
+    "app": "coral_public",
+    "defaultApp": "coral_public",
+    "repo": "Caleydo/coral_public",
+    "branch": "develop",
+    "trigger_automatic_deployment": "false",
+    "create_workspace": "true",
+    "components": {
+        "web": {
+            "type": "web",
+            "directory": "./components/web",
+            "ecr_repo": "coral_public/web",
+            "additionals": [
+                {
+                    "name": "coral",
+                    "repo": "Caleydo/coral",
+                    "branch": "develop"
+                  },
+                  {
+                    "name": "phovea_security_store_generated",
+                    "repo": "datavisyn/phovea_security_store_generated",
+                    "branch": "develop"
+                  },
+                  {
+                    "name": "tdp_core",
+                    "repo": "datavisyn/tdp_core",
+                    "branch": "develop"
+                  }
+            ]
+        },
+        "api": {
+            "type": "api",
+            "directory": "./components/api",
+            "ecr_repo": "coral_public/server",
+            "additionals": [
+                {
+                    "name": "coral",
+                    "repo": "Caleydo/coral",
+                    "branch": "develop"
+                  },
+                  {
+                    "name": "phovea_security_store_generated",
+                    "repo": "datavisyn/phovea_security_store_generated",
+                    "branch": "develop"
+                  },
+                  {
+                    "name": "tdp_publicdb",
+                    "repo": "Caleydo/tdp_publicdb",
+                    "branch": "develop"
+                  }
+            ]
+        }
+    }
+}

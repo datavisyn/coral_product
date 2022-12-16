@@ -1,0 +1,9 @@
+name: build
+
+on: [push, workflow_dispatch]
+
+
+jobs:
+  build:
+    uses: datavisyn/github-workflows/.github/workflows/build-product.yml@new_deployment
+    secrets: inherit

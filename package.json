@@ -1,0 +1,23 @@
+{
+  "name": "coral_product",
+  "description": "",
+  "homepage": "https://datavisyn.io",
+  "version": "3.0.0",
+  "author": {
+    "name": "Patrick Adelberger",
+    "email": "patrick.adelberger@jku.at",
+    "url": "https://github.com/Caleydo"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/datavisyn/coral_product/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datavisyn/coral_product.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+  }
+}

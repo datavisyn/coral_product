@@ -1,0 +1,29 @@
+name: deploy
+run-name: Deploy ${{ github.ref || github.head_ref }} to ${{ inputs.customer }} ${{ inputs.stage }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "stage that should be deployed (develop|qa|production)"
+        required: true
+        type: choice
+        options:
+        - develop
+        - qa
+        - production
+        default: develop
+      customer:
+        description: "customer for that the app should be deployed"
+        required: true
+        # can't be a dynamic choice so far
+        type: string
+        default: datavisyn
+
+jobs:
+  deploy:
+    uses: datavisyn/github-workflows/.github/workflows/deploy-product.yml@new_deployment
+    with:
+      stage: ${{ inputs.stage }}
+      customer: ${{ inputs.customer }}
+    secrets: inherit
